@@ -25,7 +25,7 @@ gulp.task('img', function(){
     gutil.log('Movendo imagens');
 
 
-    return gulp.src('./src/img/*.js')
+    return gulp.src('./src/img/*')
         .pipe(gulp.dest('./dist/img/'));
 });
 
