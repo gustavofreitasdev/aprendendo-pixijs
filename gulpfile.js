@@ -20,6 +20,14 @@ gulp.task('js', function(){
     return gulp.src('./src/js/*.js')
         .pipe(gulp.dest('./dist/js/'));
 });
+/** Tarefa responsável por mover arquivos de imagens da pasta de desenvolvimento para de produção/testes */
+gulp.task('img', function(){
+    gutil.log('Movendo imagens');
+
+
+    return gulp.src('./src/img/*.js')
+        .pipe(gulp.dest('./dist/img/'));
+});
 
 /** Tarefa responsável por limpar a pasta de produção/testes */
 gulp.task('clean', function(){
@@ -33,7 +41,7 @@ gulp.task('clean', function(){
 gulp.task('watch', function(){
     gutil.log('Esperando por mudanças na pasta src...');
 
-    gulp.watch('./src/**/*', ['html', 'js']);
+    gulp.watch('./src/**/*', ['html', 'js', 'img']);
 });
 /** Tarefa padrão, compilar arquivos PUG para HTML e move arquivos JS */
-gulp.task('default', ['html', 'js', 'watch']);
+gulp.task('default', ['html', 'js', 'img', 'watch']);
