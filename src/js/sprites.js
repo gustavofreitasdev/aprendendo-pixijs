@@ -88,7 +88,7 @@ function configuracao() {
 
     /**Depois de carregar uma imagem e usá-la para criar um sprite, você precisa adicionar o sprite ao palco do Pixi 
      * com o método stage.addChild, assim: */
-    app.stage.addChild(gatoSprite);
+    app.stage.addChild(gatoSprite); // adicionando gato (sprite), no palco.
     // Importante: você não poderá ver nenhum de seus sprites, a menos que você os adicione ao palco!
 }
 
