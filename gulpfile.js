@@ -17,8 +17,8 @@ gulp.task('js', function(){
     gutil.log('Movendo arquivos JS');
 
 
-    return gulp.src('./src/js/*.js')
-        .pipe(gulp.dest('./dist/js/'));
+    return gulp.src('./src/**/*.js')
+        .pipe(gulp.dest('./dist/'));
 });
 /** Tarefa responsável por mover arquivos de imagens da pasta de desenvolvimento para de produção/testes */
 gulp.task('img', function(){
